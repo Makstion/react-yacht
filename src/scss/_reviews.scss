@@ -1,0 +1,130 @@
+.reviews-block {
+  padding-bottom: 0;
+}
+
+.rew-img-1 {
+  background-image: url(../images/review-1.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.rew-img-2 {
+  background-image: url(../images/review-2.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.rew-img-3 {
+  background-image: url(../images/review-3.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.rew-img-4 {
+  background-image: url(../images/review-4.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.reviews-block-item {
+  border: 1px solid #b7becc;
+  height: 300px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px 0 40px;
+
+  @media screen and (max-width: 991.98px) {
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0 auto 40px auto;
+    width: 80%;
+    padding-top: 50px;
+  }
+}
+.reviews-block-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../images/review-bg-1.png);
+  width: 58px;
+  height: 41px;
+  left: 15px;
+  bottom: 15px;
+  z-index: -1;
+
+  @media screen and (max-width: 991.98px) {
+    display: none;
+  }
+}
+.reviews-block-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../images/review-bg-2.png);
+  width: 145px;
+  height: 103px;
+  right: 15px;
+  top: 15px;
+  z-index: -1;
+
+  @media screen and (max-width: 991.98px) {
+    display: none;
+  }
+}
+.reviews-block-item-img {
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: -30px;
+  float: left;
+  margin-right: 30px;
+  margin-left: 15px;
+
+  @media screen and (max-width: 991.98px) {
+    width: 96px;
+    height: 96px;
+    margin: -35px 0 0 0;
+  }
+}
+.reviews-block-item-author {
+  margin: 20px 0 15px 40px;
+  font-weight: bold;
+  font-size: 16px;
+
+  @media screen and (max-width: 991.98px) {
+    margin-top: 0;
+
+    .reviews-block-item-img + & {
+      margin-top: 20px;
+    }
+  }
+
+  .reviews-block-item-img + & {
+    margin-left: 0;
+  }
+}
+.reviews-block-item-message {
+  padding: 0 40px;
+
+  @media screen and (max-width: 575.98px) {
+    text-align: center;
+    font-size: 14px;
+    padding: 0px;
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 991.98px) {
+    text-align: center;
+    font-size: 14px;
+    padding: 0px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 14px;
+  }
+}
