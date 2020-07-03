@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, hashRouter Redirect, Route, Switch} from 'react-router-dom'
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import BoardContainer from "./components/Board/BoardContainer";
@@ -8,8 +8,8 @@ import BoardContainer from "./components/Board/BoardContainer";
 function App() {
 
   return (
-
-        <BrowserRouter>
+// BrowserRouter - hashRouter for dev
+        <hashRouter basename={process.env.PUBLIC_URL}>
             <div className="app-wrapper">
                 <Navbar />
                 <Switch>
@@ -21,7 +21,7 @@ function App() {
                     <Redirect to={'/'}/>
                 </Switch>
             </div>
-        </BrowserRouter>
+        </hashRouter>
 
 
   );
