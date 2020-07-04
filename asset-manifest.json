@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-yacht/static/css/main.8d98a148.chunk.css",
-    "main.js": "/react-yacht/static/js/main.f7a0efc7.chunk.js",
-    "main.js.map": "/react-yacht/static/js/main.f7a0efc7.chunk.js.map",
+    "main.js": "/react-yacht/static/js/main.83184746.chunk.js",
+    "main.js.map": "/react-yacht/static/js/main.83184746.chunk.js.map",
     "runtime-main.js": "/react-yacht/static/js/runtime-main.454c476f.js",
     "runtime-main.js.map": "/react-yacht/static/js/runtime-main.454c476f.js.map",
     "static/js/2.896dcc39.chunk.js": "/react-yacht/static/js/2.896dcc39.chunk.js",
     "static/js/2.896dcc39.chunk.js.map": "/react-yacht/static/js/2.896dcc39.chunk.js.map",
     "index.html": "/react-yacht/index.html",
-    "precache-manifest.94b0b3e40acab48db1ffa8ac1ec70654.js": "/react-yacht/precache-manifest.94b0b3e40acab48db1ffa8ac1ec70654.js",
+    "precache-manifest.762a86365dbb89b041e403b744c191d7.js": "/react-yacht/precache-manifest.762a86365dbb89b041e403b744c191d7.js",
     "service-worker.js": "/react-yacht/service-worker.js",
     "static/css/main.8d98a148.chunk.css.map": "/react-yacht/static/css/main.8d98a148.chunk.css.map",
     "static/js/2.896dcc39.chunk.js.LICENSE.txt": "/react-yacht/static/js/2.896dcc39.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.454c476f.js",
     "static/js/2.896dcc39.chunk.js",
     "static/css/main.8d98a148.chunk.css",
-    "static/js/main.f7a0efc7.chunk.js"
+    "static/js/main.83184746.chunk.js"
   ]
 }
