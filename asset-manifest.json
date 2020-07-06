@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-yacht/static/css/main.e60ae472.chunk.css",
-    "main.js": "/react-yacht/static/js/main.155beb6e.chunk.js",
-    "main.js.map": "/react-yacht/static/js/main.155beb6e.chunk.js.map",
+    "main.js": "/react-yacht/static/js/main.99770c85.chunk.js",
+    "main.js.map": "/react-yacht/static/js/main.99770c85.chunk.js.map",
     "runtime-main.js": "/react-yacht/static/js/runtime-main.454c476f.js",
     "runtime-main.js.map": "/react-yacht/static/js/runtime-main.454c476f.js.map",
-    "static/js/2.4212514d.chunk.js": "/react-yacht/static/js/2.4212514d.chunk.js",
-    "static/js/2.4212514d.chunk.js.map": "/react-yacht/static/js/2.4212514d.chunk.js.map",
+    "static/js/2.a4cef603.chunk.js": "/react-yacht/static/js/2.a4cef603.chunk.js",
+    "static/js/2.a4cef603.chunk.js.map": "/react-yacht/static/js/2.a4cef603.chunk.js.map",
     "index.html": "/react-yacht/index.html",
-    "precache-manifest.96b0c1131e665ebb403c1834a6f7e2d5.js": "/react-yacht/precache-manifest.96b0c1131e665ebb403c1834a6f7e2d5.js",
+    "precache-manifest.057dc89b6fd3d8df660e12ea51be8b8a.js": "/react-yacht/precache-manifest.057dc89b6fd3d8df660e12ea51be8b8a.js",
     "service-worker.js": "/react-yacht/service-worker.js",
     "static/css/main.e60ae472.chunk.css.map": "/react-yacht/static/css/main.e60ae472.chunk.css.map",
-    "static/js/2.4212514d.chunk.js.LICENSE.txt": "/react-yacht/static/js/2.4212514d.chunk.js.LICENSE.txt"
+    "static/js/2.a4cef603.chunk.js.LICENSE.txt": "/react-yacht/static/js/2.a4cef603.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.454c476f.js",
-    "static/js/2.4212514d.chunk.js",
+    "static/js/2.a4cef603.chunk.js",
     "static/css/main.e60ae472.chunk.css",
-    "static/js/main.155beb6e.chunk.js"
+    "static/js/main.99770c85.chunk.js"
   ]
 }
