@@ -1,0 +1,13 @@
+.plans-list {
+  padding: 10px 5px;
+
+  li {
+    padding: 4px 3px;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

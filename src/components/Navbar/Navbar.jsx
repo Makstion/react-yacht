@@ -1,19 +1,20 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './Navbar.scss'
 
 const Navbar = (props) => {
     return (
         <nav className="nav">
-            <NavLink
+            <Link
                 to="/"
                 exact
-            >Home</NavLink>
-            <NavLink to="/about" >About</NavLink>
-            <NavLink to="/rules" >Rules</NavLink>
-            <NavLink to={{
+            >Home</Link>
+            <Link to="/about" >About</Link>
+            <Link to="/rules" >Rules</Link>
+            <Link to="/Plans" >Plans</Link>
+            <Link to={{
                 pathname: '/board/'
-            }}>Board game</NavLink>
+            }}>Board game</Link>
         </nav>
     );
 }
