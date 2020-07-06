@@ -11,7 +11,7 @@ function App() {
 
   return (
 
-        <BrowserRouter>
+        <BrowserRouter basename="/react-yacht/.">
             <div className="app-wrapper">
                 <HeaderContainer />
                 <Navbar />
