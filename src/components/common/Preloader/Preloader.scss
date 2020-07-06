@@ -1,0 +1,35 @@
+@import "./../../../scss/tools.scss";
+@import "./../../../scss/animations.scss";
+
+.preloader-container {
+    opacity: 1;
+    position: relative;
+    .preloader {
+        &:before {
+            content: "";
+            position: fixed;
+            top: calc(50% - 35px);
+            left: calc(50% - 35px);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #fff222;
+            animation: spin-reverse-pre 1.2s linear infinite;
+            z-index: 110;
+        }
+        &:after {
+            content: "";
+            position: fixed;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #fca719;
+            animation: spin-pre 0.8s linear infinite;
+            z-index: 110;
+        }
+    }
+}

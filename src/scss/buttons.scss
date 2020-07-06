@@ -1,0 +1,90 @@
+@import "./tools.scss";
+@import "./variables.scss";
+
+.btn {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    @include hover-focus-active {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.btn.btn-main-action {
+    background: linear-gradient(180deg, #0077b5 0%, $main-color 100%);
+    border-radius: 4px;
+    color: $btn-font-color;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    border: 1px solid $main-color;
+
+    color: $white;
+
+    @include hover-focus-active {
+        opacity: 0.6;
+    }
+}
+@include btn-main-hover-focus(
+    ".btn.btn-main-action",
+    $btn-bg-color,
+    $btn-border-color,
+    $btn-font-color,
+    $btn-bg-color-hover,
+    $btn-border-color-hover,
+    $btn-font-color-hover,
+    0.4s
+);
+
+.btn.btn-second-action {
+    background-color: $btn-white-bg-color;
+    border: 1px solid $btn-white-border-color;
+    color: $btn-font-color;
+
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 11px 20px;
+}
+
+@include btn-main-hover-focus(
+    ".btn.btn-second-action",
+    $btn-white-bg-color,
+    $btn-white-border-color,
+    $btn-second-font-color,
+    $btn-white-bg-color-hover,
+    $btn-white-border-color-hover,
+    $btn-second-font-color-hover,
+    0.4s
+);
+
+.btn.btn-like {
+    background: $btn-white-bg-color;
+    color: $main-text-color;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 11px 20px;
+}
+
+@include btn-main-hover-focus(
+    ".btn.btn-like",
+    $btn-white-bg-color,
+    $btn-special-border-color,
+    $btn-special-font-color,
+    $btn-white-bg-color-hover,
+    $btn-special-border-color-hover,
+    $btn-special-font-color-hover,
+    0.4s
+);

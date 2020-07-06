@@ -1,0 +1,54 @@
+$white: #fff;
+$grey: #E7E7E7;
+$black: #010101;
+$grey-white: #f4f4f4;
+$main-text-color: #181818;
+$secont-text-color: #0275B1;
+
+$main-color: #0275b1;
+$main-color-dark: #0E6795;
+$content-border-color: #f4f4f4;
+
+$bg-body: #f6f9fb;
+
+// --- BUTTONS --- //
+
+
+// - MAIN - //
+// BG
+$btn-bg-color: $main-color;
+$btn-bg-color-hover: $main-color-dark;
+// BORDER
+$btn-border-color: $main-color;
+$btn-border-color-hover: $main-color-dark;
+// FONT
+$btn-font-color: $white;
+$btn-font-color-hover: $white;
+
+// - SECOND - //
+
+//BG
+$btn-white-bg-color: $white;
+$btn-white-bg-color-hover: $main-color;
+
+// BORDER
+$btn-white-border-color: $main-color;
+$btn-white-border-color-hover: $main-color;
+//FONT
+$btn-second-font-color: $main-color;
+$btn-second-font-color-hover: $white;
+
+// - SPECIAL - //
+//BG
+$btn-white-bg-color: $white;
+$btn-white-bg-color-hover: $main-color;
+// border
+$btn-special-border-color: $content-border-color;
+$btn-special-border-color-hover: $main-color;
+//font
+$btn-special-font-color: $main-color;
+$btn-special-font-color-hover: $white;
+
+
+
+// --- FORM --- //

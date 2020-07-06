@@ -1,0 +1,13 @@
+@import "./../../../scss/tools.scss";
+@import "./../../../scss/animations.scss";
+
+.pagination {
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: scroll;
+
+    span {
+        padding: 10px;
+        cursor: pointer;
+    }
+}

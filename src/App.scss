@@ -1,7 +1,36 @@
-@import "./scss/styles";
+@import "./scss/reset.scss";
 
+@import "./scss/fonts.scss";
+@import "./scss/tools.scss";
+@import "./scss/variables.scss";
+
+@import "./scss/block.scss";
+@import "./scss/buttons.scss";
+
+body {
+  background-color: $bg-body;
+}
 
 .app-wrapper {
-  max-width: 1180px;
+  display: grid;
+
+  grid-template-areas:
+    "h h h"
+    "n c c";
+
+  // grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  width: 100%;
+
   margin: 0 auto;
+}
+
+.app-wrapper-content {
+  grid-area: c;
+  padding: 10px 10px 10px 100px;
+  background-color: #f6f9fb;
+  color:$main-text-color;
+
+  width: 60%;
 }

@@ -1,0 +1,40 @@
+.block {
+    background-color: $white;
+    padding: 20px 0px;
+
+    &-header {
+        border-bottom: 1px solid $content-border-color;
+        padding: 0px 30px 30px;
+
+
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 11px;
+        text-transform: uppercase;
+        color: #181818;
+    }
+    &-body {
+        border-bottom: 1px solid $content-border-color;
+        padding: 20px 30px;
+    }
+    &-footer {
+        padding: 20px 30px 0px;
+    }
+
+    .dialog-block {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+    }
+}
+
+
+.text-block {
+    padding: 20px 0px;
+}
+
+.page {
+    background-color: $white;
+    padding: 15px;
+    box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+    border-radius: 4px;
+}

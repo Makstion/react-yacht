@@ -1,0 +1,73 @@
+@mixin hover-focus-active {
+    &:hover,
+    &:focus {
+        .no-touch & {
+            @content;
+        }
+    }
+    &:active {
+        .touch & {
+            @content;
+        }
+    }
+}
+@mixin btn-main-hover-focus(
+    $tag,
+    $btn-bg-color,
+    $btn-border-color,
+    $btn-font-color,
+    $btn-bg-color-hover,
+    $btn-border-color-hover,
+    $btn-font-color-hover,
+    $transition
+) {
+    #{$tag} {
+        background-color: $btn-bg-color;
+        border: 1px solid $btn-border-color;
+        color: $btn-font-color;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $btn-bg-color-hover;
+            border: 1px solid $btn-border-color-hover;
+            color: $btn-font-color-hover;
+            transition: $transition;
+        }
+    }
+}
+
+// функция для svg файлов. для ковнертации цвета
+@function url-friendly-colour($colour) {
+    @return "%23" + str-slice("#{$colour}", 2, -1);
+}
+// функция для svg файлов. для ковнертации цвета
+@function url-svg-colour($colour) {
+    @return "%23" + str-slice("#{$colour}", 7, -1);
+}
+
+@function url-border-colour($colour) {
+    @return "#" + str-slice("#{$colour}", 7, -1);
+}
+
+// color-5533dd
+
+// функция для текста файлов. для ковнертации цвета
+@function url-text-colour($colour) {
+    @return "#" + str-slice("#{$colour}", 7, -1);
+}
+
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}

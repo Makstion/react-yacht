@@ -4,29 +4,17 @@ import './Navbar.scss'
 
 const Navbar = (props) => {
     return (
-        <>
-            <nav className="nav">
-                <ul>
-                    <li>
-                        <NavLink
-                            to="/"
-                            exact
-                            activeClassName={'wfm-active'}
-                        >Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about" activeStyle={{
-                            color: 'blue'
-                        }}>About</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={{
-                            pathname: '/board/'
-                        }}>Board game</NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </>
+        <nav className="nav">
+            <NavLink
+                to="/"
+                exact
+            >Home</NavLink>
+            <NavLink to="/about" >About</NavLink>
+            <NavLink to="/rules" >Rules</NavLink>
+            <NavLink to={{
+                pathname: '/board/'
+            }}>Board game</NavLink>
+        </nav>
     );
 }
 export default  Navbar;

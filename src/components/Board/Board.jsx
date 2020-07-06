@@ -75,14 +75,14 @@ const Board = (props) => {
     }
 
     return (
-            <div className="board-wrapper">
-                <h2>Board game</h2>
+            <div className="board-wrapper page">
+                <h2 className="page-title">Board game</h2>
                 <div className="board-table">
                     <div className="combination">
 
 
-                        {Object.keys(props.combinations).map((combination, index) => <div key={index}>
-                            <span>{props.combinations[combination].name}</span>
+                        {Object.keys(props.combinations).map((combination, index) => <div className={'combination-item'} key={index}>
+                            <span className={"combination-item-name"}>{props.combinations[combination].name}</span>
                             <span
                                 className={'combination-result'}
                                 onClick={() => onWriteValue(props.combinations[combination].id)}
@@ -105,9 +105,11 @@ const Board = (props) => {
                         )}
 
                         {state.currentRoll > 0 ? <div className="result-block">бросок {state.currentRoll }</div> : null}
-                        {state.messageAboutStep.length > 0 ? <div> {state.messageAboutStep} </div> : null}
+                        {state.messageAboutStep.length > 0 ? <div className={"messageAboutStep"}> {state.messageAboutStep} </div> : null}
                     </div>
-                    <button onClick={() => onRollingDices(state.dicesValue)}>ROLL!</button>
+                    <button
+                        className={"btn btn-main-action"}
+                        onClick={() => onRollingDices(state.dicesValue)}>ROLL!</button>
 
                 </div>
             </div>
