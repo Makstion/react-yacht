@@ -18,7 +18,8 @@ const About = (props) => {
             <div className="page-text">
                 <span className={'page-data'}>0.6.07.2020  </span>
                 <span className="page-text-little">update v.0.81</span> <br/>
-                Design update
+                Design update <br/>
+                Was added btn new-game
             </div>
 
 

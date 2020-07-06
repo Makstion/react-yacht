@@ -10,6 +10,7 @@ const RESET_DICES = 'RESET_DICES';
 const RESET_CURRENT_ROLL = 'RESET_CURRENT_ROLL';
 const MAKE_ALL_DICES_CHECKED = 'MAKE_ALL_DICES_CHECKED'
 
+
 const initialState = {
     dicesValue: {
         '1':{ id: 1, value: null, checked: true},
@@ -22,6 +23,8 @@ const initialState = {
     maxRoll: 3,
     messageAboutStep: 'Кидайте кости',
 }
+
+
 
 
 const dicesReducer = (state = initialState, action) => {
@@ -137,5 +140,6 @@ export const getMakeRoll = (dicesValue, currentRoll, combinations) => {
         dispatch(getPossibleValue(getResultForAllCombination(newDicesValue, combinations)))
     }
 }
+
 export default dicesReducer;
 

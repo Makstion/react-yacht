@@ -6,6 +6,7 @@ import {
 } from "../../math/math";
 import './Board.scss';
 import * as R from "ramda";
+import {is} from "ramda";
 
 
 
@@ -16,6 +17,15 @@ const Board = (props) => {
 
     const onPickDice = (diceId) => {
         props.getPickDice(diceId, state.currentRoll, state.maxRoll, state.dicesValue[diceId].checked);
+    }
+
+    const startNewGame = () => {
+        const isMakeStart = window.confirm("Начать новую игру?");
+
+        if (isMakeStart) {
+            props.startNewGame()
+            props.getResetDices();
+        }
     }
 
     const onRollingDices = (dices) => {
@@ -77,6 +87,11 @@ const Board = (props) => {
     return (
             <div className="board-wrapper page">
                 <h2 className="page-title">Board game</h2>
+                <div>
+                    <button
+                        className={"btn btn-second-action"}
+                        onClick={() => startNewGame()}>New Game</button>
+                </div>
                 <div className="board-table">
                     <div className="combination">
 
@@ -110,6 +125,7 @@ const Board = (props) => {
                     <button
                         className={"btn btn-main-action"}
                         onClick={() => onRollingDices(state.dicesValue)}>ROLL!</button>
+
 
                 </div>
             </div>

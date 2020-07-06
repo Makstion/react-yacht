@@ -2,7 +2,7 @@ import React from "react";
 import Board from "./Board";
 import {connect} from 'react-redux'
 import { compose } from "redux";
-import {writeResult, resetPossibleValues, getTotalScore, getPossibleValue} from "../../redux/boardReducer";
+import {writeResult, resetPossibleValues, getTotalScore, getPossibleValue, startNewGame} from "../../redux/boardReducer";
 import {getMakeRoll, getPickDice, newMessageAboutStep, getResetDices} from "../../redux/dicesReducer";
 
 const BoardContainer = (props) => {
@@ -18,6 +18,7 @@ const BoardContainer = (props) => {
         getMakeRoll = {props.getMakeRoll}
         newMessageAboutStep = {props.newMessageAboutStep}
         getResetDices = {props.getResetDices}
+        startNewGame = {props.startNewGame}
 
     />
 }
@@ -39,7 +40,8 @@ export default compose(
         getPickDice,
         getMakeRoll,
         newMessageAboutStep,
-        getResetDices
+        getResetDices,
+        startNewGame
     }),
 )(BoardContainer);
 
