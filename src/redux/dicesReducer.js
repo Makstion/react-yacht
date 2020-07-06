@@ -8,7 +8,7 @@ const PICK_DICE = 'PICK_DICE';
 const NEW_MESSAGE_ABOUT_STEP = 'NEW_MESSAGE_ABOUT_STEP'
 const RESET_DICES = 'RESET_DICES';
 const RESET_CURRENT_ROLL = 'RESET_CURRENT_ROLL';
-
+const MAKE_ALL_DICES_CHECKED = 'MAKE_ALL_DICES_CHECKED'
 
 const initialState = {
     dicesValue: {
@@ -51,6 +51,13 @@ const dicesReducer = (state = initialState, action) => {
             return R.over(
                 R.lensProp('dicesValue'),
                 R.map(R.assoc('value', null)),
+                state
+            );
+        }
+        case MAKE_ALL_DICES_CHECKED: {
+            return R.over(
+                R.lensProp('dicesValue'),
+                R.map(R.assoc('checked', true)),
                 state
             );
         }
@@ -99,6 +106,13 @@ const resetDices = () => {
     }
 }
 
+const makeAllDicesChecked = () => {
+    return {
+        type: MAKE_ALL_DICES_CHECKED
+    }
+
+}
+
 const resetCurrentRoll = () => {
     return {
         type: RESET_CURRENT_ROLL
@@ -109,6 +123,7 @@ export const getResetDices = () => {
     return (dispatch) => {
         dispatch(resetDices());
         dispatch(resetCurrentRoll());
+        dispatch(makeAllDicesChecked());
     }
 }
 

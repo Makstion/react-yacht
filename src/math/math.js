@@ -75,7 +75,6 @@ export const  getChance = (dicesValue) => {
 export const getSum = (i, dicesValue) => {
     const dicesValues = getDicesValues(dicesValue);
     const result =  (i * dicesValues.reduce((amount, currentValue) => currentValue === i ? ++amount : amount, 0));
-    let type;
     switch (i) {
         case 1: {
             return result
@@ -118,7 +117,7 @@ export const unique = (arr) => {
 }
 
 export const uniqueArray = (arr) => {
-    let arrayCopy = [];
+    // let arrayCopy = [];
     for (let key in arr) {
         if (arr[key].includes) { }
     }
@@ -128,7 +127,7 @@ export const uniqueArray = (arr) => {
 // функция сортирует и удаляет повторяющие элементы
 export const uniq = (a) => {
     return a.sort().filter(function (item, pos, ary) {
-        return !pos || item != ary[pos - 1];
+        return !pos || item !== ary[pos - 1];
     })
 }
 // summ повтор элементов
@@ -207,7 +206,7 @@ export const  getFullHouse = (dicesValue) => {
     let dicesValues = getDicesValues(dicesValue);
     let result;
     let oneAnswer = countSumOfRepeatElemensInDices(repeatedAmount, dicesValue); // проверим, есть ли сет в массиве костей
-    let dubleAnswer = countSumOfRepeatElemensInDices(repeatedAmount-1, dicesValue);
+    // let dubleAnswer = countSumOfRepeatElemensInDices(repeatedAmount-1, dicesValue);
     if (oneAnswer === 0 && uniq(dicesValues).length === 2) {
         result= 40;
     } else {

@@ -1,6 +1,5 @@
 import * as R from 'ramda'
-import {getResultForCurrentCombination, getTotal} from "../math/math";
-import {dissocPath} from "ramda";
+
 
 const WRITE_RESULT = 'WRITE_RESULT'
 const RESET_POSSIBLE_VALUES = 'RESET_POSSIBLE_VALUES';

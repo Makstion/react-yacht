@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import {
-    getResultForAllCombination, getResultForCurrentCombination,
+    getResultForCurrentCombination,
     getSubTotal,
     getTotal,
-    randomInteger
 } from "../../math/math";
 import './Board.scss';
 import * as R from "ramda";
