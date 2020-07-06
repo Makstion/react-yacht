@@ -16,6 +16,9 @@ const Plans = () => {
                 <li>Add multiplayer</li>
                 <li> Add good design</li>
                 <li>Add react-animation</li>
+                <li>Add dark theme</li>
+                <li>Add Prealoder</li>
+                <li>Add opportunity to change lang (rus/eng)</li>
             </ul>
         </div>
     )
