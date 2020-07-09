@@ -19,6 +19,7 @@ const Plans = () => {
                 <li>Add dark theme</li>
                 <li>Add Prealoder</li>
                 <li>Add opportunity to change lang (rus/eng)</li>
+                <li>Mobile, tablet and xs PC screen size (media)</li>
             </ul>
         </div>
     )

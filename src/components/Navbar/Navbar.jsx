@@ -11,10 +11,12 @@ const Navbar = (props) => {
             >Home</Link>
             <Link to="/about" >About</Link>
             <Link to="/rules" >Rules</Link>
-            <Link to="/Plans" >Plans</Link>
             <Link to={{
                 pathname: '/board/'
             }}>Board game</Link>
+            <Link to="/Plans" >Plans</Link>
+            <Link to="/winners" >winners</Link>
+
         </nav>
     );
 }

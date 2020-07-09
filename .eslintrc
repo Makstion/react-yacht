@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends":  ["eslint:recommended"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "ignorePatterns": ["*.test.js", "node_modules/"],
+  "rules": {
+    "max-len": ["error", { "code": 120, "comments": 150 }],
+    "semi": ["error", "always"],
+    "no-console": 1
+  }
+}

@@ -176,7 +176,6 @@ export const getSmallStreet = (dicesValue) => {
     dicesValues = uniq(dicesValues);
 
     if (dicesValues[i] === (dicesValues[i + 1] - 1) && dicesValues[i + 1] === (dicesValues[i + 2] - 1) && dicesValues[i + 2] === (dicesValues[i + 3] - 1)) {
-        // console.log(dicesValues + 'стрит 1-4');
         result = 25;
     } else {
      result = 0;
@@ -192,7 +191,6 @@ export const  getBigStreet =(dicesValue)  => {
     dicesValues = uniq(dicesValues);
 
     if (dicesValues[i] === (dicesValues[i + 1] - 1) && dicesValues[i + 1] === (dicesValues[i + 2] - 1) && dicesValues[i + 2] === (dicesValues[i + 3] - 1) && dicesValues[i + 3] === (dicesValues[i + 4] - 1)) {
-        // console.log(cubesValues + 'стрит 1-5');
         result = 30;
     } else {
         result = 0;
@@ -206,7 +204,6 @@ export const  getFullHouse = (dicesValue) => {
     let dicesValues = getDicesValues(dicesValue);
     let result;
     let oneAnswer = countSumOfRepeatElemensInDices(repeatedAmount, dicesValue); // проверим, есть ли сет в массиве костей
-    // let dubleAnswer = countSumOfRepeatElemensInDices(repeatedAmount-1, dicesValue);
     if (oneAnswer === 0 && uniq(dicesValues).length === 2) {
         result= 40;
     } else {

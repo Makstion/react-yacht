@@ -6,64 +6,60 @@ import {
 } from "../../math/math";
 import './Board.scss';
 import * as R from "ramda";
-import {is} from "ramda";
+import Dices from "./Dices/Dices";
+import Combinations from "./Combinations/Combinations";
 
 
 
 
 const Board = (props) => {
-    let dicesValue = props.dices.dicesValue;
-    let state = props.dices;
 
-    const onPickDice = (diceId) => {
-        props.getPickDice(diceId, state.currentRoll, state.maxRoll, state.dicesValue[diceId].checked);
-    }
+    let state = props.dices;
 
     const startNewGame = () => {
         const isMakeStart = window.confirm("Начать новую игру?");
 
         if (isMakeStart) {
-            props.startNewGame()
+            props.startNewGame();
             props.getResetDices();
         }
-    }
+    };
 
     const onRollingDices = (dices) => {
-        const isChecked = (dices) => dices.checked
+        const isChecked = (dices) => dices.checked;
         let dicesWithChecked =R.filter(isChecked, dices);
         const canRoll = R.isEmpty(dicesWithChecked);
 
         if (canRoll) {
-            props.newMessageAboutStep('Выберите кости или запишите результат!')
-            console.log('canRoll')
+            props.newMessageAboutStep('Выберите кости или запишите результат!');
         } else if (state.currentRoll < state.maxRoll && state.currentRoll >= 0) {
-            // props.resetPossibleValues();
             props.getMakeRoll(dices, state.currentRoll, props.combinations);
-            props.newMessageAboutStep('Хороший бросок. Запишем или кидаем дальше?!')
-            // props.getPossibleValue(getResultForAllCombination(state.dicesValue, props.combinations));
+            props.newMessageAboutStep('Хороший бросок. Запишем или кидаем дальше?!');
 
             if (state.currentRoll + 1 === state.maxRoll) {
-            props.newMessageAboutStep('Это был последний бросок, запишите результат')
+            props.newMessageAboutStep('Это был последний бросок, запишите результат');
             }
         } else if (state.currentRoll === state.maxRoll) {
             props.newMessageAboutStep('Бросков больше нет, запишите результат');
         }
-    }
+    };
 
 
     const onWriteValue = (combinationId) => {
 
-        const hasValue = (dices) => dices.value
+        const hasValue = (dices) => dices.value;
         let dicesWithValue =R.filter(hasValue, props.dices.dicesValue);
         const canWrite = R.isEmpty(dicesWithValue);
 
         if (state.currentRoll > 0) {
             if (props.combinations[combinationId].canChange && !canWrite) {
 
-                let resultOfCurrent = getResultForCurrentCombination(props.combinations[combinationId].type, state.dicesValue, props.combinations);
+                let resultOfCurrent = getResultForCurrentCombination(props.combinations[combinationId].type,
+                    state.dicesValue, props.combinations);
                 let resultOfSubTotal = 0;
                 if (combinationId < 7) {
-                    resultOfSubTotal = getResultForCurrentCombination(props.combinations[combinationId].type, state.dicesValue, props.combinations);
+                    resultOfSubTotal = getResultForCurrentCombination(props.combinations[combinationId].type,
+                        state.dicesValue, props.combinations);
                 }
                 props.writeResult(resultOfCurrent, combinationId);
                 let totalValue = getTotal(props.combinations) + resultOfCurrent;
@@ -82,8 +78,7 @@ const Board = (props) => {
                 props.newMessageAboutStep('Новый ход! Кидайте кости пожалуйста!');
             }
         }
-    }
-
+    };
     return (
             <div className="board-wrapper page">
                 <h2 className="page-title">Board game</h2>
@@ -93,43 +88,28 @@ const Board = (props) => {
                         onClick={() => startNewGame()}>New Game</button>
                 </div>
                 <div className="board-table">
-                    <div className="combination">
-
-
-                        {Object.keys(props.combinations).map((combination, index) => <div className={'combination-item'} key={index}>
-                            <span className={"combination-item-name"}>{props.combinations[combination].name}</span>
-                            <span
-                                className={'combination-result'}
-                                onClick={() => onWriteValue(props.combinations[combination].id)}
-                            >
-                               <div className={'value'}> {props.combinations[combination].value}</div>
-                                <div className={'possible-value'}> {props.combinations[combination].value  === null && props.combinations[combination].possibleValue} </div>
-                            </span>
-
-                        </div>)}
-
-                    </div>
-
-                    <div className="result" >
-                        {Object.keys(dicesValue).map((dice, index) =>
-                            <div key={index}
-                                className={`dice ${dicesValue[dice].checked ? 'active' : ' '}`}
-                                onClick={() => onPickDice(dicesValue[dice].id)}
-                            >{dicesValue[dice].value}
-                            </div>
-                        )}
-
-                        {state.currentRoll > 0 ? <div className="result-block">бросок {state.currentRoll }</div> : null}
-                        {state.messageAboutStep.length > 0 ? <div className={"messageAboutStep"}> {state.messageAboutStep} </div> : null}
-                    </div>
+                    <Dices
+                        dicesValue={props.dices.dicesValue}
+                        currentRoll={props.dices.currentRoll}
+                        maxRoll={props.dices.maxRoll}
+                        getPickDice={props.getPickDice}
+                        messageAboutStep={props.dices.messageAboutStep}
+                    />
                     <button
                         className={"btn btn-main-action"}
                         onClick={() => onRollingDices(state.dicesValue)}>ROLL!</button>
 
+                    <Combinations
+                        dicesValue={props.dices.dicesValue}
+                        maxRoll={props.dices.maxRoll}
+                        messageAboutStep={props.dices.messageAboutStep}
+                        combinations={props.combinations}
+
+                    />
 
                 </div>
             </div>
-    )
-}
+    );
+};
 
 export default Board;

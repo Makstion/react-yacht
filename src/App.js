@@ -7,6 +7,7 @@ import BoardContainer from "./components/Board/BoardContainer";
 import Rules from "./components/Rules/Rules";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Plans from "./components/Plans/Plans";
+import Winners from "./components/Winners/Winners";
 // BrowserRouter  basename={process.env.PUBLIC_URL} - hashRouter for dev
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/about" component={About}/>
                     <Route path="/rules" component={Rules}/>
                     <Route path="/plans" component={Plans}/>
+                    <Route path="/winners" component={Winners}/>
                     <Route path="/board/:name" component={BoardContainer}/>
                     <Route path="/board" component={BoardContainer}/>
                     <Redirect to={'/'}/>
