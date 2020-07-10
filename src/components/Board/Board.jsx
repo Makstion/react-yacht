@@ -8,7 +8,7 @@ import './Board.scss';
 import * as R from "ramda";
 import Dices from "./Dices/Dices";
 import Combinations from "./Combinations/Combinations";
-
+import axios from 'axios';
 
 
 
