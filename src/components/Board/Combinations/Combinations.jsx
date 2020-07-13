@@ -4,15 +4,14 @@ import {getResultForCurrentCombination, getSubTotal, getTotal} from "../../../ma
 
 
 const Combinations = (props) => {
+
     const onWriteValue = (combinationId) => {
 
-        const hasValue = (dices) => dices.value;
-        let dicesWithValue =R.filter(hasValue, props.dices.dicesValue);
+        const hasValue = (dice) => dice.value;
+        let dicesWithValue =R.filter(hasValue, props.dicesValue);
         const canWrite = R.isEmpty(dicesWithValue);
-
         if (props.currentRoll > 0) {
             if (props.combinations[combinationId].canChange && !canWrite) {
-
                 let resultOfCurrent = getResultForCurrentCombination(props.combinations[combinationId].type,
                     props.dicesValue, props.combinations);
                 let resultOfSubTotal = 0;

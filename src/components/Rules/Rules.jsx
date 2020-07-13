@@ -16,7 +16,7 @@ const Rules = props => {
                 <NavLink
                     to="/board"
                     exact
-                    Class={'btn btn-main-action'}
+                   сlassName={'btn btn-main-action'}
                 >Play!</NavLink>
             </div>
         </div>
