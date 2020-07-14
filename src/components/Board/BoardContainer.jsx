@@ -21,16 +21,16 @@ const BoardContainer = (props) => {
         getResetDices = {props.getResetDices}
         startNewGame = {props.startNewGame}
         writeWinner={props.writeWinner}
-    />
-}
+    />;
+};
 
 
 const mapStateToProps = (state) => {
     return {
         combinations: state.board.combinations,
         dices: state.dices,
-    }
-}
+    };
+};
 
 export default compose(
     connect(mapStateToProps, {

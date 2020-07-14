@@ -1,4 +1,4 @@
-$white: #fff;
+$white: rgb(255,255,255);
 $grey: #E7E7E7;
 $black: #010101;
 $grey-white: #f4f4f4;
@@ -9,7 +9,21 @@ $main-color: #0275b1;
 $main-color-dark: #0E6795;
 $content-border-color: #f4f4f4;
 
-$bg-body: #f6f9fb;
+
+
+$bg-body: rgb(246,249,251);
+$bg-body-dark: rgba(2, 117, 177, 0.65);
+
+$color-black: rgb(16,16,16);
+$color-white: rgb(255,255,255);
+$color-gray-light: rgba($color-white, .15);
+$color-gray-dark: rgba($color-black, .9);
+
+$color-blue-white: rgb(1, 151, 231);
+$color-blue-whitest:rgba(2, 117, 177, 0.1);
+
+$color-blue-dark: rgba($main-color, 1);
+$color-blue-darkest: rgb(1, 44, 64);
 
 // --- BUTTONS --- //
 

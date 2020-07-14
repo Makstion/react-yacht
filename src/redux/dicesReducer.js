@@ -1,14 +1,14 @@
-import * as R from 'ramda'
-import {getResultForAllCombination, makeNewDiceValue} from './../math/math'
+import * as R from 'ramda';
+import {getResultForAllCombination, makeNewDiceValue} from './../math/math';
 import {getPossibleValue, resetPossibleValues} from "./boardReducer";
 
 
 const MAKE_ROLL = 'MAKE_ROLL';
 const PICK_DICE = 'PICK_DICE';
-const NEW_MESSAGE_ABOUT_STEP = 'NEW_MESSAGE_ABOUT_STEP'
+const NEW_MESSAGE_ABOUT_STEP = 'NEW_MESSAGE_ABOUT_STEP';
 const RESET_DICES = 'RESET_DICES';
 const RESET_CURRENT_ROLL = 'RESET_CURRENT_ROLL';
-const MAKE_ALL_DICES_CHECKED = 'MAKE_ALL_DICES_CHECKED'
+const MAKE_ALL_DICES_CHECKED = 'MAKE_ALL_DICES_CHECKED';
 
 
 const initialState = {
@@ -22,7 +22,7 @@ const initialState = {
     currentRoll: 0,
     maxRoll: 3,
     messageAboutStep: 'Кидайте кости',
-}
+};
 
 
 
@@ -34,7 +34,7 @@ const dicesReducer = (state = initialState, action) => {
                 ...state,
                 dicesValue: action.newDicesValue,
                 currentRoll: action.newCurrentRoll
-            }
+            };
         }
         case PICK_DICE: {
             // let checked = !state.dicesValue[action.diceId].checked;
@@ -48,7 +48,7 @@ const dicesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 messageAboutStep: action.newMessage
-            }
+            };
         }
         case RESET_DICES: {
             return R.over(
@@ -68,78 +68,77 @@ const dicesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentRoll: 0
-            }
+            };
         }
         default:
-            return state
+            return state;
     }
-}
+};
 
 const pickDice = (diceId, checked) => {
-    return {type: PICK_DICE, diceId, checked}
-}
+    return {type: PICK_DICE, diceId, checked};
+};
 export const getPickDice = (diceId, currentRoll, maxRoll, checked) => {
     return (dispatch) => {
         if (currentRoll < maxRoll && currentRoll > 0) {
             dispatch(pickDice(diceId, !checked));
         }
-    }
-}
+    };
+};
 
 const makeRoll = (newDicesValue, newCurrentRoll) => {
     return {
         type: MAKE_ROLL,newDicesValue,newCurrentRoll
-    }
-}
+    };
+};
 const writeMessageAboutStep = (newMessage) => {
     return {
         type: NEW_MESSAGE_ABOUT_STEP, newMessage
-    }
-}
+    };
+};
 
 export const newMessageAboutStep = (newMessage) => {
     return (dispatch) => {
         dispatch(writeMessageAboutStep(newMessage));
-    }
-}
+    };
+};
 
 const resetDices = () => {
     return {
         type: RESET_DICES
-    }
-}
+    };
+};
 
 const makeAllDicesChecked = () => {
     return {
         type: MAKE_ALL_DICES_CHECKED
-    }
-
-}
+    };
+};
 
 const resetCurrentRoll = () => {
     return {
         type: RESET_CURRENT_ROLL
-    }
-}
+    };
+};
 
 export const getResetDices = () => {
     return (dispatch) => {
         dispatch(resetDices());
         dispatch(resetCurrentRoll());
         dispatch(makeAllDicesChecked());
-    }
-}
+    };
+};
 
 
 export const getMakeRoll = (dicesValue, currentRoll, combinations) => {
     return (dispatch) => {
          let newDicesValue = makeNewDiceValue(dicesValue);
 
-         dispatch(resetPossibleValues())
-         dispatch(makeRoll(newDicesValue, currentRoll +1))
-        dispatch(getPossibleValue(getResultForAllCombination(newDicesValue, combinations)))
-    }
-}
+         dispatch(resetPossibleValues());
+         dispatch(makeRoll(newDicesValue, currentRoll +1));
+        dispatch(getPossibleValue(getResultForAllCombination(newDicesValue, combinations)));
+    };
+};
 
 export default dicesReducer;
 

@@ -6,14 +6,12 @@
 
 @import "./scss/block.scss";
 @import "./scss/buttons.scss";
+@import "./scss/themes.scss";
 
-body {
-  background-color: $bg-body;
-}
 
 .app-wrapper {
   display: grid;
-
+  background-color: var(--color-page-background);
   grid-template-areas:
     "h h h"
     "n c c";
@@ -30,7 +28,7 @@ body {
   grid-area: c;
   padding: 10px 10px 10px 100px;
   background-color: #f6f9fb;
-  color:$main-text-color;
+  color: $main-text-color;
 
   width: 60%;
 }

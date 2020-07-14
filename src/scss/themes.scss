@@ -1,0 +1,61 @@
+// --- themes --- //
+
+:root {
+  --color-page-background: #{$bg-body};
+  --color-text: #{$color-black};
+  --color-text-active: #{$color-white};
+  --color-border-main: #{$main-color};
+  --color-border: #{$color-black};
+  --color-article-background: #{$color-white};
+  --color-article-shadow: #{$color-gray-dark};
+
+  --color-main-active: #{$main-color};
+  --color-main: #{$color-blue-whitest};
+
+  --btn-bg-color: #{$btn-bg-color};
+  --btn-border-color: #{$btn-border-color};
+  --btn-font-color: #{$btn-font-color};
+  --btn-bg-color-hover: #{$btn-bg-color-hover};
+  --btn-border-color-hover: #{$btn-border-color-hover};
+  --btn-font-color-hover: #{$btn-font-color-hover};
+
+  --btn-white-bg-color: #{$btn-white-bg-color};
+  --btn-white-bg-color-hover: #{$btn-white-bg-color-hover};
+  --btn-white-border-color: #{$btn-white-border-color};
+  --btn-white-border-color-hover: #{$btn-white-border-color-hover};
+  --btn-second-font-color: #{$btn-second-font-color};
+  --btn-second-font-color-hover:#{$btn-second-font-color-hover};
+
+}
+
+.theme--dark {
+  --color-page-background: #{$bg-body-dark};
+  --color-text: #{$color-white};
+  --color-text-active: #{$color-white};
+  --color-border-main: #{$color-white};
+  --color-border: #{$color-gray-light};
+  --color-article-background: #{$color-blue-dark};
+  --color-article-shadow: #{$color-blue-dark};
+
+  --color-main: #{$color-blue-white};
+  --color-main-active: #{$color-blue-darkest};
+
+  --btn-bg-color: #{$color-white};
+  --btn-border-color: #{$bg-body-dark};
+  --btn-font-color: #{$main-color};
+  --btn-bg-color-hover: #{$color-blue-darkest};
+  --btn-border-color-hover: #{$color-blue-darkest};
+  --btn-font-color-hover: #{$btn-font-color-hover};
+
+  --btn-white-bg-color: #{$color-blue-darkest};
+  --btn-white-bg-color-hover: #{$color-blue-white};
+  --btn-white-border-color: #{$color-blue-darkest};
+  --btn-white-border-color-hover: #{$bg-body-dark};
+  --btn-second-font-color: #{$white};
+  --btn-second-font-color-hover:#{$btn-second-font-color-hover}
+}
+
+
+* {
+  transition: all .15s ease;
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import './Navbar.scss'
+import "./navbar.scss";
 
-const Navbar = (props) => {
+
+const Navbar = () => {
     return (
         <nav className="nav">
             <Link
                 to="/"
-                exact
             >Home</Link>
             <Link to="/about" >About</Link>
             <Link to="/rules" >Rules</Link>
@@ -19,5 +19,5 @@ const Navbar = (props) => {
 
         </nav>
     );
-}
+};
 export default  Navbar;

@@ -9,5 +9,8 @@
     &:hover {
       opacity: 0.5;
     }
+    &.done {
+     font-weight: 700;
+    }
   }
 }

@@ -53,8 +53,10 @@ const Board = (props) => {
             setId(id +1);
             let result = {name: name, score: props.combinations[16].value, id: id};
             props.writeWinner(result);
+        } else {
+            props.newMessageAboutStep('Чтобы записать результат, завершите игру');
         }
-        props.newMessageAboutStep('Чтобы записать результат, завершите игру');
+        props.newMessageAboutStep('Готово!');
     };
     const [name, setName] = useState('');
     const [id, setId] = useState(0);

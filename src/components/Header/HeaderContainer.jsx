@@ -2,24 +2,28 @@ import React from "react";
 import Header from "./Header";
 import Preloader from "../common/Preloader/Preloader";
 import { connect } from "react-redux";
+import {changeTheme} from "../../redux/settings/settingReducer";
 
 
-class HeaderContainer extends React.Component {
 
-
-  render() {
+const HeaderContainer =(props) => {
     return (
       <>
-        {this.props.isFetching ? <Preloader /> : null}
-        <Header  />
+        {props.isFetching ? <Preloader /> : null}
+        <Header
+            settings={props.settings}
+            changeTheme={props.changeTheme}
+        />
       </>
     );
-  }
-}
-const mapStateToProps = (state) => ({
+};
 
-});
+const mapStateToProps = (state) => {
+  return {
+    settings: state.settings,
+  };
+};
 
 export default connect(mapStateToProps, {
-
+  changeTheme
 })(HeaderContainer);
