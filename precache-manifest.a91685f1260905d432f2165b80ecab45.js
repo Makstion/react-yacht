@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e27f5aacd9916753b576c7e5013a677a",
+    "revision": "a2044f8fdbf2efea7e95ad2c4e07e86d",
     "url": "/react-yacht/index.html"
   },
   {
-    "revision": "7a42f0fdc6f04db277c0",
+    "revision": "86a313fb866632d3e772",
     "url": "/react-yacht/static/css/main.aa4a6a75.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-yacht/static/js/2.7df1902f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7a42f0fdc6f04db277c0",
-    "url": "/react-yacht/static/js/main.9d691d6a.chunk.js"
+    "revision": "86a313fb866632d3e772",
+    "url": "/react-yacht/static/js/main.2dcdfbcd.chunk.js"
   },
   {
     "revision": "e0bb59ef0ac5ca39417d",
